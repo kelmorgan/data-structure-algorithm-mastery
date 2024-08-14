@@ -1,17 +1,19 @@
 package com.kelmorgan.datastrutcureandalgorithm;
 
-import com.kelmorgan.datastrutcureandalgorithm.linkedlist.LinkedList;
-
-import java.util.Arrays;
+import com.kelmorgan.datastrutcureandalgorithm.stacks.Expression;
+import com.kelmorgan.datastrutcureandalgorithm.stacks.Stack;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        var list = new LinkedList();
+        Stack stack = new Stack();
 
-        list.addLast(10);
-        list.addFirst(20);
-        list.addLast(30);
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+
+        System.out.println(stack.peek());
+
     }
 }
