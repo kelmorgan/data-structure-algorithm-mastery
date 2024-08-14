@@ -1,9 +1,5 @@
 package com.kelmorgan.datastrutcureandalgorithm.array;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class Array {
 
     private int[] array;
@@ -35,7 +31,7 @@ public class Array {
             throw new IllegalArgumentException("Invalid Index");
 
 
-        for (int i = index; i < count; i++) {
+        for (int i = index; i < --count; i++) {
             array[i] = array[i + 1];
         }
 

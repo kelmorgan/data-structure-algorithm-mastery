@@ -1,19 +1,44 @@
 package com.kelmorgan.datastrutcureandalgorithm;
 
-import com.kelmorgan.datastrutcureandalgorithm.stacks.Expression;
-import com.kelmorgan.datastrutcureandalgorithm.stacks.Stack;
+
+import com.kelmorgan.datastrutcureandalgorithm.queues.ArrayQueue;
+import com.kelmorgan.datastrutcureandalgorithm.queues.QueueWithTwoStacks;
+
+import java.util.ArrayDeque;
+import java.util.Queue;
+import java.util.Stack;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Stack stack = new Stack();
+        QueueWithTwoStacks queue = new QueueWithTwoStacks();
 
-        stack.push(10);
-        stack.push(20);
-        stack.push(30);
+        queue.enqueue(10);
+        queue.enqueue(20);
+        queue.enqueue(30);
 
-        System.out.println(stack.peek());
+        queue.dequeue();
+        queue.dequeue();
+        var item = queue.peek();
 
+        System.out.println(item);
+
+
+
+    }
+
+    public static  void reverse (Queue<Integer> queue){
+        Stack<Integer> stack = new Stack();
+
+
+        while (!queue.isEmpty())
+            stack.add(queue.remove());
+
+        while (!stack.empty())
+            queue.add(stack.pop());
+
+
+        System.out.println(queue);
     }
 }
