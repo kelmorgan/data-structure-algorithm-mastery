@@ -14,8 +14,7 @@ public class PriorityQueue {
 
 
 
-
-        for (int i = count - 1; i >=0; i--){
+        for (int i = count - 1; i >=0; i--) {
 
         }
     }

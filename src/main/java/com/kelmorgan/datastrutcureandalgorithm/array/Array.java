@@ -31,7 +31,7 @@ public class Array {
             throw new IllegalArgumentException("Invalid Index");
 
 
-        for (int i = index; i < --count; i++) {
+        for (int i = index; i < count - 1; i++) {
             array[i] = array[i + 1];
         }
 
